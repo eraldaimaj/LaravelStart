@@ -7,8 +7,8 @@
               <div class="box card box-widget widget-user">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-black" style="background-image:url('./img/image.jpg')">
-              <h3 class="widget-user-username">Elizabeth Pierce</h3>
-              <h5 class="widget-user-desc">Web Designer</h5>
+              <h3 class="widget-user-username">{{this.form.name}}</h3>
+              <h5 class="widget-user-desc">{{this.form.bio}}</h5>
             </div>
             <div class="widget-user-image">
               <img class="img-circle" :src="getProfilePhoto()" alt="User Avatar">
@@ -71,7 +71,7 @@
                   </div>
                   <div class="form-group col-sm-10">
                     <label for="inputPassword" class="col-sm-2 control-label">Password</label>
-                      <input type="password" v-model="form.password" class="form-control" id="inputName" placeholder="Password">
+                      <input type="password" v-model="form.password" class="form-control" id="inputPassword" placeholder="Password">
                       <has-error :form="form" field="password"> </has-error>
                     </div>
                 
